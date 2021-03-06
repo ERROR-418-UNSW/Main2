@@ -13,9 +13,9 @@ exports.handler = async (event, context) => {
   const VideoGrant = AccessToken.VideoGrant;
 
   // Used when generating any kind of tokens
-  const twilioAccountSid = process.env.twilio.account_sid;
-  const twilioApiKey = process.env.twilio.api_key_sid;
-  const twilioApiSecret = process.env.twilio.api_key_secret;
+  const twilioAccountSid = process.env.account_sid;
+  const twilioApiKey = process.env.api_key_sid;
+  const twilioApiSecret = process.env.api_key_secret;
 
   // Create Video Grant
   const videoGrant = new VideoGrant({
