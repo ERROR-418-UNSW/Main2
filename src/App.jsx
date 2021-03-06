@@ -3,7 +3,7 @@ import React from "react";
 import app from "firebase";
 
 import { useAuthState } from "react-firebase-hooks/auth";
-import Viewport from "./components/Viewport";
+import RoomSelect from "./components/RoomSelect";
 import Login from "./components/Login";
 
 const firebaseConfig = {
@@ -16,7 +16,6 @@ const firebaseConfig = {
 };
 // Initialize Firebase
 app.initializeApp(firebaseConfig);
-
 const fbApp = app.app();
 const auth = app.auth();
 
@@ -29,7 +28,9 @@ function App() {
         <h1>Campfire 🔥</h1>
       </header>
 
-      <main>{user ? <Viewport /> : <Login auth={auth} />}</main>
+      <main>
+        {user ? <RoomSelect user={user.displayName} /> : <Login auth={auth} />}
+      </main>
 
       <footer className="mx-auto">UNIHACK Team Error 418</footer>
     </div>
