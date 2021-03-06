@@ -1,13 +1,12 @@
 exports.handler = (event, context, callback) => {
-  const body = JSON.parse(event.body);
-
-  if (event.httpMethod !== "POST") {
+  if (event.httpMethod !== "POST" || !event.body) {
     return {
       statusCode: 400,
       body: JSON.stringify({ message: "Incorrect HTTP method. " }),
     };
   }
 
+  const body = JSON.parse(event.body);
   const { username, roomName } = body;
 
   const AccessToken = require("twilio").jwt.AccessToken;
