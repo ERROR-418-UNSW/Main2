@@ -1,4 +1,4 @@
-exports.handler = (event, context, callback) => {
+exports.handler = async (event, context) => {
   if (event.httpMethod !== "POST" || !event.body) {
     return {
       statusCode: 400,
