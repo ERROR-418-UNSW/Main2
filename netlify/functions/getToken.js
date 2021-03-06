@@ -34,8 +34,6 @@ exports.handler = async (event, context) => {
 
   return {
     statusCode: 200,
-    body: {
-      token: token.toJwt(),
-    },
+    body: JSON.stringify(token.toJwt()),
   };
 };
