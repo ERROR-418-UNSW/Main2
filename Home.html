@@ -27,7 +27,25 @@
     <meta property="og:url" content="index.html">
   </head>
   <body class="u-body"><header class="u-clearfix u-custom-color-2 u-header u-header" id="sec-fa41"><img src="images/unnamed-2.png" alt="" class="u-image u-image-default u-image-1" data-image-width="512" data-image-height="315"><img src="images/unnamed-2.png" alt="" class="u-image u-image-default u-image-2" data-image-width="512" data-image-height="315"><img src="images/unnamed-2.png" alt="" class="u-image u-image-default u-image-3" data-image-width="512" data-image-height="315"><h2 class="u-text u-text-custom-color-3 u-text-1">The CampFire</h2><img src="images/1809.m10.i008.n006.p.c25.1072200314-burning-bonfire-animation.gif" alt="" class="u-image u-image-default u-image-4" data-image-width="800" data-image-height="600"><img src="images/7d064a7b2c501b9b3937c1a5941b62be2f51aae51.png" alt="" class="u-image u-image-default u-image-5" data-image-width="1000" data-image-height="1003"></header> 
-    
+        <form id="form" onsubmit="return false;">
+            <input style="position:absolute; top:20%; left:30%; width:40%; height:3%;" type="text" id="userInput" placeholder="Post your topic/question here"/>
+            <input style="position:absolute; top:25%; left:40%; width:20%;" type="submit" onclick="othername();" />
+        </form>
+    <p style="position:absolute; top:50%; left:45%; color:white;"> 
+      Top Rooms
+      <br>
+      <span id="result"></span>
+    </p>
+    <p id="demo"></p>
+    <script>
+      values = [];
+      function othername() {
+          var inp = document.getElementById("userInput");
+          values.push(inp.value);
+          inp.value = "";
+          document.getElementById("result").innerHTML = values.join("<br>");
+      }
+    </script>
     
     <footer class="u-align-left u-clearfix u-footer u-grey-80 u-footer" id="sec-a030"><div class="u-clearfix u-sheet u-sheet-1"></div></footer>
     <section class="u-backlink u-clearfix u-grey-80">
