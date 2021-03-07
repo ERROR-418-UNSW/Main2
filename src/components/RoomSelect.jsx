@@ -57,12 +57,16 @@ function RoomSelect({ user }) {
     return (
       <div>
         <input
+          style="position:absolute; top:20%; left:30%; width:40%; height:5%; color:black"
           type="text"
           name="question"
           value={roomName}
           onChange={(event) => setRoomName(event.target.value)}
         />
-        <button onClick={handleGetToken}>Create room</button>
+        <button 
+          style="position:absolute; top:28%; left:40%; width:20%; color:black"
+          onClick={handleGetToken}>Create room
+        </button>
         {rooms.map((room) => (
           <div>
             <button
