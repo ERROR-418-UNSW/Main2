@@ -37,9 +37,21 @@ function App() {
         {user ? <RoomSelect user={user.displayName} /> : <Login auth={auth} />}
       </main>
       <div>
-      <img src={rain} alt="Rain" />;
-      <img src={man} alt="Man" />;
-      <img src={bonfire} alt="Bonfire" />;
+      <img src={rain} alt="Rain" width="100" height="50"
+      style={{
+        top:'20%',
+        right:'30%',
+      }}/>;
+      <img src={man} alt="Man" width="100" height="50"
+      style={{
+        top:'20%',
+        right:'30%',
+      }}/>;
+      <img src={bonfire} alt="Bonfire" width="100" height="50"
+      style={{
+        top:'20%',
+        right:'30%',
+      }}/>;
       </div>
       <footer
       style={{
