@@ -32,7 +32,8 @@ function App() {
         {user ? <RoomSelect user={user.displayName} /> : <Login auth={auth} />}
       </main>
 
-      <footer 
+      <footer
+      style="position:absolute; top:110%; left:45%; color:black;" 
       className="mx-auto">UNIHACK Team Error 418</footer>
     </div>
   );
