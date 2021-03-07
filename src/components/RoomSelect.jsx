@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 
 import Room from "./Room";
 
+import './style.css';
+
 function RoomSelect({ user }) {
   // Token starts null
   const [token, setToken] = useState(null);
@@ -57,6 +59,7 @@ function RoomSelect({ user }) {
     return (
       <div>
         <input
+          className="input"
           placeholder="Post your topic here"
           type="text"
           name="question"
@@ -64,6 +67,7 @@ function RoomSelect({ user }) {
           onChange={(event) => setRoomName(event.target.value)}
         />
         <button 
+          className="button"
           onClick={handleGetToken}>Create room
         </button>
         {rooms.map((room) => (
