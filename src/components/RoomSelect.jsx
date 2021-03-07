@@ -70,7 +70,6 @@ function RoomSelect({ user }) {
         {rooms.map((room) => (
           <div>
             <button
-              style="position:absolute; top:110%; left:45%; color:white"
               onClick={() => {
                 setRoomName(room.uniqueName);
                 handleGetToken();
