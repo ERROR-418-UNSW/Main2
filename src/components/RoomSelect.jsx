@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import Room from "./Room";
 
-import './style.css';
+import './style.scss';
 
 function RoomSelect({ user }) {
   // Token starts null
