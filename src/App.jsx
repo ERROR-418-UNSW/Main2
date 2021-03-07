@@ -34,9 +34,9 @@ function App() {
     <div className="App">
       <header>
       <h1>Campfire 🔥</h1>
-      return <img src={rain} alt="Rain" />;
-      return <img src={man} alt="Man" />;
-      return <img src={bonfire} alt="Bonfire" />;
+      <img src={rain} alt="Rain" />;
+      <img src={man} alt="Man" />;
+      <img src={bonfire} alt="Bonfire" />;
       <main>
         {user ? <RoomSelect user={user.displayName} /> : <Login auth={auth} />}
       </main>
