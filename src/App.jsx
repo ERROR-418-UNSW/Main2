@@ -42,11 +42,6 @@ function App() {
       </main>
 
       <footer
-      style={{
-        top:'50%',
-        left:'45%',
-        color:'black',
-      }}
       className="mx-auto">UNIHACK Team Error 418</footer>
     </div>
   );
