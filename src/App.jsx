@@ -26,7 +26,6 @@ function App() {
     <div className="App">
       <header>
         <h1>Campfire 🔥</h1>
-        <header class="u-clearfix u-custom-color-2 u-header u-header" id="sec-fa41"><img src="images/unnamed-2.png" alt="" class="u-image u-image-default u-image-1" data-image-width="512" data-image-height="315"><img src="images/unnamed-2.png" alt="" class="u-image u-image-default u-image-2" data-image-width="512" data-image-height="315"><img src="images/unnamed-2.png" alt="" class="u-image u-image-default u-image-3" data-image-width="512" data-image-height="315"><h2 class="u-text u-text-custom-color-3 u-text-1">The CampFire</h2><div class="u-clearfix u-custom-html u-custom-html-1"></div>
       </header>
 
       <main>
@@ -34,7 +33,6 @@ function App() {
       </main>
 
       <footer 
-      style="position:absolute; bottom:50%; left:45%; color:black;"
       className="mx-auto">UNIHACK Team Error 418</footer>
     </div>
   );
