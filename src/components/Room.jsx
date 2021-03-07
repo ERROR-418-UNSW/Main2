@@ -36,7 +36,7 @@ function Room({ token, roomName, username, handleExit }) {
         }
       });
     };
-  }, [roomName, token, users]);
+  }, [roomName, token]);
 
   const remoteParticipants = users.map((u) => (
     <UserVideo key={u.sid} user={u} />
