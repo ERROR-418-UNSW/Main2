@@ -32,23 +32,26 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Campfire 🔥 - UNIHACK Team Error 418</h1>
+      <h1>Campfire 🔥</h1>
       <main>
         {user ? <RoomSelect user={user.displayName} /> : <Login auth={auth} />}
       </main>
       <div>
       <img src={rain} alt="Rain" width="100" height="50"
       style={{
+        position:'absolute',
         top:'20%',
         right:'30%',
       }}/>;
       <img src={man} alt="Man" width="100" height="50"
       style={{
+        position:'absolute',
         top:'20%',
         right:'30%',
       }}/>;
       <img src={bonfire} alt="Bonfire" width="100" height="50"
       style={{
+        position: 'absolute';
         top:'20%',
         right:'30%',
       }}/>;
