@@ -57,6 +57,11 @@ function RoomSelect({ user }) {
     return (
       <div>
         <input
+          placeholder="Post your topic here"
+          type="text"
+          name="question"
+          value={roomName}
+          onChange={(event) => setRoomName(event.target.value)}
           style={{
             position:'absolute',
             top:'20%',
@@ -65,13 +70,9 @@ function RoomSelect({ user }) {
             height:'5%', 
             color:'black',
           }}
-          placeholder="Post your topic here"
-          type="text"
-          name="question"
-          value={roomName}
-          onChange={(event) => setRoomName(event.target.value)}
         />
         <button 
+          onClick={handleGetToken}
           style={{
             position:'absolute',
             top:'28%',
@@ -79,7 +80,7 @@ function RoomSelect({ user }) {
             width:'20%',
             color:'black',
           }}
-          onClick={handleGetToken}>Create room
+        >Create room
         </button>
         {rooms.map((room) => (
           <div>
