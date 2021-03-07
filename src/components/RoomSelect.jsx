@@ -57,6 +57,7 @@ function RoomSelect({ user }) {
     return (
       <div>
         <input
+          placeholder="Post your topic here"
           type="text"
           name="question"
           value={roomName}
