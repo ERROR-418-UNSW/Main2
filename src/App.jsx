@@ -6,13 +6,9 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import RoomSelect from "./components/RoomSelect";
 import Login from "./components/Login";
 
-import man from './man.png';
 import bonfire from './bonfire.gif';
-import rain from './rain.png';
 
-console.log(man);
 console.log(bonfire);
-console.log(rain);
 
 const firebaseConfig = {
   apiKey: "AIzaSyD7prbZqSj_GD84p_eYLuWeCj8vpudiNRg",
@@ -37,21 +33,8 @@ function App() {
         {user ? <RoomSelect user={user.displayName} /> : <Login auth={auth} />}
       </main>
       <div>
-      <img src={rain} alt="Rain" width="100" height="50"
-      style={{
-        position:'absolute',
-        top:'20%',
-        right:'30%',
-      }}/>;
-      <img src={man} alt="Man" width="100" height="50"
-      style={{
-        position:'absolute',
-        top:'20%',
-        right:'30%',
-      }}/>;
       <img src={bonfire} alt="Bonfire" width="100" height="50"
       style={{
-        position: 'absolute';
         top:'20%',
         right:'30%',
       }}/>;
