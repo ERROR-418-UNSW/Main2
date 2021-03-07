@@ -42,8 +42,8 @@ function App() {
       <img src={bonfire} alt="Bonfire" />;
       <footer
       style={{
-        top:'50%',
-        right:'45%',
+        top:'20%',
+        right:'30%',
         color:'black',
       }}
       className="mx-auto">UNIHACK Team Error 418</footer>
