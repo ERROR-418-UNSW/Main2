@@ -32,8 +32,7 @@ function App() {
 
   return (
     <div className="App">
-      <header>
-      <h1>Campfire 🔥</h1>
+      <h1>Campfire 🔥 - UNIHACK Team Error 418</h1>
       <main>
         {user ? <RoomSelect user={user.displayName} /> : <Login auth={auth} />}
       </main>
