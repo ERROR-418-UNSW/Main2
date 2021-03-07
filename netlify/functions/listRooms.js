@@ -7,15 +7,21 @@ exports.handler = async (event, context) => {
   }
 
   // Make twilio client
+  const twilioAccountSid = process.env.account_sid;
   const twilioApiKey = process.env.api_key_sid;
   const twilioApiSecret = process.env.api_key_secret;
 
-  const client = require("twilio")(twilioApiKey, twilioApiSecret);
+  const client = require("twilio")(twilioApiKey, twilioApiSecret, {
+    accountSid: twilioAccountSid,
+  });
 
   // list rooms
-  client.video.rooms
+  const rooms = await client.video.rooms
     .list({ status: "in-progress", limit: 10 })
-    .then((rooms) => {
-      return rooms;
-    });
+    .then((rooms) => rooms.entries());
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify(rooms),
+  };
 };
