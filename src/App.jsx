@@ -37,7 +37,7 @@ function App() {
       style={{
         top:'20%',
         right:'30%',
-      }}/>;
+      }}/>
       </div>
       <footer
       style={{
