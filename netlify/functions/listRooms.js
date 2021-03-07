@@ -16,9 +16,10 @@ exports.handler = async (event, context) => {
   });
 
   // list rooms
-  const rooms = await client.video.rooms
-    .list({ status: "in-progress", limit: 10 })
-    .then((rooms) => rooms.entries());
+  const rooms = await client.video.rooms.list({
+    status: "in-progress",
+    limit: 10,
+  });
 
   return {
     statusCode: 200,

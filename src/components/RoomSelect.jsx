@@ -9,6 +9,23 @@ function RoomSelect({ user }) {
   const [rooms, setRooms] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  const fetchRooms = () => {
+    fetch(encodeURI(`/.netlify/functions/listRooms`))
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          setRooms(result);
+        },
+        (error) => {
+          console.error(error);
+        }
+      );
+  };
+
+  useEffect(() => {
+    fetchRooms();
+  }, [token]);
+
   const handleExit = () => {
     setToken(null);
   };
@@ -46,7 +63,18 @@ function RoomSelect({ user }) {
           onChange={(event) => setRoomName(event.target.value)}
         />
         <button onClick={handleGetToken}>Create room</button>
-        {/* Or Select a room from below, which will update the token. */}
+        {rooms.map((room) => (
+          <div>
+            <button
+              onClick={() => {
+                setRoomName(room.uniqueName);
+                handleGetToken();
+              }}
+            >
+              {room.uniqueName}
+            </button>
+          </div>
+        ))}
       </div>
     );
   } else {
