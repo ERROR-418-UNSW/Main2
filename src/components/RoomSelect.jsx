@@ -57,7 +57,6 @@ function RoomSelect({ user }) {
     return (
       <div>
         <input
-          style="position:absolute; top:20%; left:30%; width:40%; height:5%; color:black"
           type="text"
           name="question"
           value={roomName}
