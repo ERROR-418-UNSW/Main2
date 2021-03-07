@@ -43,7 +43,6 @@ function App() {
 
       <footer
       style={{
-        position:'absolute',
         top:'50%',
         left:'45%',
         color:'black',
